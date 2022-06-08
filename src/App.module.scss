@@ -1,0 +1,41 @@
+
+@import "common/sass/mixins";
+
+.appWrapper {
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+    "a b"
+    "c c";
+    height: 100vh;
+    grid-template-columns: 48px auto;
+    grid-template-rows: 1fr auto;
+
+}
+
+.navBar {
+    /*width: 48px;*/
+    background-color: #82B284;
+    /*border: 1px solid;*/
+    grid-area: a;
+}
+
+.bigButton {
+    @include bigButton(#82B284)
+}
+
+.bigButton :hover {
+    @include bigButton(#A4C7A5)
+    //background-color: #A4C7A5;
+}
+
+.button {
+    @include iconButton(#82B284)
+}
+
+.buttonsIcon {
+    @include buttonsIcon()
+}
+
+
+
